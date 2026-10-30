@@ -1,6 +1,6 @@
 # Deteksi Dini Diabetes dengan Machine Learning: Penerapan Logistic Regression, Decision Tree, Random Forest, dan XGBoost melalui Analisis Data, Teknik SMOTE, dan Evaluasi Model
 
-model telah di deploy di : [Streamlit](https://stki-a11202214529-uas.streamlit.app/)
+model telah di deploy di : [Streamlit](https://diapredict-system.streamlit.app/)
 
 ## Latar belakang
 
