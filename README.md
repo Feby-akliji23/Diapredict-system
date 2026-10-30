@@ -1,5 +1,9 @@
 # Deteksi Dini Diabetes dengan Machine Learning: Penerapan Logistic Regression, Decision Tree, Random Forest, dan XGBoost melalui Analisis Data, Teknik SMOTE, dan Evaluasi Model
 
+Nama : feby akliji rofiah  
+Nim : A11.2022.14529  
+Kelas : A11.64502  
+
 model telah di deploy di : [Streamlit](https://stki-a11202214529-uas.streamlit.app/)
 
 ## Latar belakang
@@ -53,7 +57,7 @@ Jenis kelamin dapat berperan dalam risiko diabetes, meskipun efeknya dapat berva
 Usia, merupakan salah satu faktor risiko untuk diabetes tipe 2. Risiko terkena diabetes tipe 2 meningkat seiring bertambahnya usia, terutama setelah usia 45 tahun. Hal ini mungkin disebabkan oleh fakta bahwa seiring bertambahnya usia, orang cenderung kurang aktif secara fisik, kehilangan massa otot, dan menambah berat badan. Namun, diabetes tipe 2 semakin umum terjadi pada anak-anak, remaja, dan dewasa muda karena peningkatan jumlah obesitas pada kelompok usia ini.
 
 **Urea, Cr**\
-_Urea_ dan _Creatine Ration_, merupakan produk sisa dari metabolism protein yang secara normal dipindahkan dari darah ke ginjal. Tingkat urea dan kreatinin dalam darah dapat digunakan sebagai indikator fungsi ginjal. Pada pasien diabetes, kadar urea dan kreatinin yang tinggi dapat menunjukkan adanya kerusakan ginjal akibat diabetes. Namun selain di karenakan diabetes, kadar urea dan kreatinin juga dapat dipengaruhi oleh faktor lain seperti dehidrasi, konsumsi protein tinggi, dan penggunaan obat tertentu.
+_Urea_ dan _Creatinine_ (Cr, kreatinin), merupakan produk sisa dari metabolism protein yang secara normal dipindahkan dari darah ke ginjal. Tingkat urea dan kreatinin dalam darah dapat digunakan sebagai indikator fungsi ginjal. Pada pasien diabetes, kadar urea dan kreatinin yang tinggi dapat menunjukkan adanya kerusakan ginjal akibat diabetes. Namun selain di karenakan diabetes, kadar urea dan kreatinin juga dapat dipengaruhi oleh faktor lain seperti dehidrasi, konsumsi protein tinggi, dan penggunaan obat tertentu.
 
 **HBA1C**\
 _Glycated hemoglobin_, merupakan ukuran rata-rata kadar glukosa darah selama 2-3 bulan terakhir. Ini memberikan informasi tentang kontrol gula darah jangka panjang. Tingkat _HbA1c_ yang lebih tinggi menunjukkan kontrol glikemik yang lebih buruk dan berhubungan dengan peningkatan risiko diabetes dan komplikasinya.
@@ -172,7 +176,7 @@ Dari hasil analisis, maka diperoleh kesimpulan sebagai berikut:
   | Skewness | -0.811 |
   | Kurtosis | 1.446  |
 
-  Berdasarkan gambar 2 dengan data nilai detail pada tabel 2, data pasien yang di observasi memiliki rentang usia 20 - 70 tahun, dengan rata-rata 53.49 dan nilai tengah 55, artinya dengan jarak rata-rata dan nilai tengah yang tidak terlalu jauh, hal ini didukung dengan data simpangan baku yang bernilai 8.803 yang artinya kumpulan data terbanyak berada pada rentang nilai 53.49 ±8.803 atau 44.687 - 62.293. fitur ini memiliki nilai kemiringan -0.811 dan keruncingan 1.446, artinya fitur ini memiliki distribusi yang condong ke kiri dan keruncingan yang sedikit mendekati rata.
+  Berdasarkan gambar 2 dengan data nilai detail pada tabel 2, data pasien yang di observasi memiliki rentang usia 20 - 79 tahun, dengan rata-rata 53.49 dan nilai tengah 55, artinya dengan jarak rata-rata dan nilai tengah yang tidak terlalu jauh, hal ini didukung dengan data simpangan baku yang bernilai 8.803 yang artinya kumpulan data terbanyak berada pada rentang nilai 53.49 ±8.803 atau 44.687 - 62.293. fitur ini memiliki nilai kemiringan -0.811 dan keruncingan 1.446, artinya fitur ini memiliki distribusi yang condong ke kiri dan keruncingan yang sedikit mendekati rata.
 
 - Urea
 
@@ -189,11 +193,11 @@ Dari hasil analisis, maka diperoleh kesimpulan sebagai berikut:
   | Range    | 38.4   |
   | Mean     | 5.185  |
   | Median   | 4.6    |
-  | Std      | 9,462  |
+  | Std      | 3.076  |
   | Skewness | 4.259  |
   | Kurtosis | 29.197 |
 
-  Berdasarkan gambar 3 dengan data nilai detail pada tabel 3, data pasien yang di observasi memiliki rentang urea 0.5 - 38.9, dengan rata-rata 5.185 dan nilai tengah 5.185, jarak rata-rata dan nilai tengah yang tidak terlalu jauh, namun simpangan baku berada pada 9.462 yang artinya merupakan indikasi awal memiliki distribusi yang sangat tidak normal hal ini didukung dengan nilai kemiringan 4.259 dan keruncingan 29.197, yang berarti fitur ini memiliki distribusi yang sangat condong ke kanan dan keruncingan yang sangat tinggi jauh melebihi nilai normalnya.
+  Berdasarkan gambar 3 dengan data nilai detail pada tabel 3, data pasien yang di observasi memiliki rentang urea 0.5 - 38.9, dengan rata-rata 5.185 dan nilai tengah 4.6, jarak rata-rata dan nilai tengah yang tidak terlalu jauh, namun simpangan baku berada pada 3.076 yang artinya merupakan indikasi awal memiliki distribusi yang sangat tidak normal hal ini didukung dengan nilai kemiringan 4.259 dan keruncingan 29.197, yang berarti fitur ini memiliki distribusi yang sangat condong ke kanan dan keruncingan yang sangat tinggi jauh melebihi nilai normalnya.
 
 - Cr
 
@@ -214,7 +218,7 @@ Dari hasil analisis, maka diperoleh kesimpulan sebagai berikut:
   | Skewness | 8.149  |
   | Kurtosis | 87.035 |
 
-  Berdasarkan gambar 4 dengan data nilai detail pada tabel 4, data pasien yang di observasi memiliki rentang _creatine ratio_ 6-800, dengan rata-rata 69.024 dan nilai tengah 59, jarak rata-rata dan nilai tengah yang cukup jauh, dan simpangan baku berada pada 59.521 yang artinya merupakan indikasi awal memiliki distribusi yang sangat tidak normal hal ini didukung dengan nilai kemiringan 8.149 dan keruncingan 87.035, yang berarti fitur ini memiliki distribusi yang sangat condong ke kanan dan keruncingan yang sangat tinggi jauh melebihi nilai normalnya.
+  Berdasarkan gambar 4 dengan data nilai detail pada tabel 4, data pasien yang di observasi memiliki rentang kreatinin (_creatinine_) 6-800, dengan rata-rata 69.024 dan nilai tengah 59, jarak rata-rata dan nilai tengah yang cukup jauh, dan simpangan baku berada pada 59.521 yang artinya merupakan indikasi awal memiliki distribusi yang sangat tidak normal hal ini didukung dengan nilai kemiringan 8.149 dan keruncingan 87.035, yang berarti fitur ini memiliki distribusi yang sangat condong ke kanan dan keruncingan yang sangat tinggi jauh melebihi nilai normalnya.
 
 - HbA1c
 
@@ -235,7 +239,7 @@ Dari hasil analisis, maka diperoleh kesimpulan sebagai berikut:
   | Skewness | 0.183  |
   | Kurtosis | -0.340 |
 
-  Berdasarkan gambar 4 dengan data nilai detail pada tabel 4, data pasien yang di observasi memiliki rentang _HbA1c_ 0.9-16, dengan rata-rata 8.326 dan nilai tengah 8.1, jarak rata-rata dan nilai tengah yang tidak terlalu jauh jauh mengindikasikan bahwa distribusinya cukup normal, hal tersebut juga dapat dilihat dari kemiringannya yang hanya 0.183, dengan keruncingan yang cukup datar pada -0.340.
+  Berdasarkan gambar 5 dengan data nilai detail pada tabel 5, data pasien yang di observasi memiliki rentang _HbA1c_ 0.9-16, dengan rata-rata 8.326 dan nilai tengah 8.1, jarak rata-rata dan nilai tengah yang tidak terlalu jauh jauh mengindikasikan bahwa distribusinya cukup normal, hal tersebut juga dapat dilihat dari kemiringannya yang hanya 0.183, dengan keruncingan yang cukup datar pada -0.340.
 
 - Chol
 
@@ -306,7 +310,7 @@ Dari hasil analisis, maka diperoleh kesimpulan sebagai berikut:
 
   Gambar 9. Analisis univariat pada fitur `LDL`
 
-  Tabel 9. Analisis nilai statistik pada fitur `HDL`
+  Tabel 9. Analisis nilai statistik pada fitur `LDL`
 
   |          | Nilai |
   | -------- | ----- |
@@ -319,7 +323,7 @@ Dari hasil analisis, maka diperoleh kesimpulan sebagai berikut:
   | Skewness | 1.005 |
   | Kurtosis | 3.023 |
 
-  Berdasarkan gambar 9 dengan data nilai detail pada tabel 9, data pasien yang di observasi memiliki rentang kolesterol jahat jenis _LDL_ 0.2-9.9, dengan rata-rata 2.590 dan nilai tengah 2.5, jarak rata-rata dan nilai tengah yang tidak terlalu jauh, namun simpangan baku yang cukup besar pada 1.132 yang artinya data rata-rata memiliki rentang nilai 1.458 - 3.722 atau sekitar 24% dari keseluruhan rentang data. untuk kemiringannya sendiri jika dilihat pada nilai kemiringan yang sedikit diatas rentang normal yaitu pada 1.005, yang artinya kemiringan condong ke kanan, dengan keruncingan yang bisa dikatakan normal pada 3.023. semua hal ini mengindikasikan fitur _LDL_ tidak berdistribusi normal.
+  Berdasarkan gambar 9 dengan data nilai detail pada tabel 9, data pasien yang di observasi memiliki rentang kolesterol jahat jenis _LDL_ 0.3-9.9, dengan rata-rata 2.590 dan nilai tengah 2.5, jarak rata-rata dan nilai tengah yang tidak terlalu jauh, namun simpangan baku yang cukup besar pada 1.132 yang artinya data rata-rata memiliki rentang nilai 1.458 - 3.722 atau sekitar 24% dari keseluruhan rentang data. untuk kemiringannya sendiri jika dilihat pada nilai kemiringan yang sedikit diatas rentang normal yaitu pada 1.005, yang artinya kemiringan condong ke kanan, dengan keruncingan yang bisa dikatakan normal pada 3.023. semua hal ini mengindikasikan fitur _LDL_ tidak berdistribusi normal.
 
 - VLDL
 
@@ -340,7 +344,7 @@ Dari hasil analisis, maka diperoleh kesimpulan sebagai berikut:
   | Skewness | 5.893  |
   | Kurtosis | 40.185 |
 
-  Berdasarkan gambar 10 dengan nilai detail pada tabel 9, data pasien yang di observasi memiliki rentang kolesterol jahat jenis _VLDL_ 0.1-35, dengan rata-rata 1.775 dan nilai tengah 1, jika dibandingkan dengan rentang datanya yaitu 34.9, jarak rata-rata dan nilai tengah dikatakan tidak terlalu jauh, namun simpangan baku yang cukup besar pada 3.516 yang artinya data rata-rata memiliki rentang nilai -1.761 - 5.271 atau sekitar 20% dari keseluruhan rentang data. untuk kemiringannya sendiri jika dilihat pada nilai kemiringan yang sangat tinggi yaitu pada 5.893, yang artinya kemiringan sangat condong ke kanan, dengan keruncingan yang sangat tinggi juga pada 40.185. semua hal ini mengindikasikan fitur _VLDL_ tidak berdistribusi normal.
+  Berdasarkan gambar 10 dengan nilai detail pada tabel 10, data pasien yang di observasi memiliki rentang kolesterol jahat jenis _VLDL_ 0.1-35, dengan rata-rata 1.775 dan nilai tengah 1, jika dibandingkan dengan rentang datanya yaitu 34.9, jarak rata-rata dan nilai tengah dikatakan tidak terlalu jauh, namun simpangan baku yang cukup besar pada 3.516 yang artinya data rata-rata memiliki rentang nilai -1.761 - 5.271 atau sekitar 20% dari keseluruhan rentang data. untuk kemiringannya sendiri jika dilihat pada nilai kemiringan yang sangat tinggi yaitu pada 5.893, yang artinya kemiringan sangat condong ke kanan, dengan keruncingan yang sangat tinggi juga pada 40.185. semua hal ini mengindikasikan fitur _VLDL_ tidak berdistribusi normal.
 
 - BMI
 
@@ -361,7 +365,7 @@ Dari hasil analisis, maka diperoleh kesimpulan sebagai berikut:
   | Skewness | 0.081  |
   | Kurtosis | -0.425 |
 
-  Berdasarkan gambar 10 dengan nilai detail pada tabel 9, data pasien yang di observasi memiliki rentang _BMI_ 0.1-35, dengan rata-rata 39.459 dan nilai tengah 30, jika dibandingkan dengan rentang datanya yaitu 29.459, jarak rata-rata dan nilai tengah dikatakan tidak terlalu jauh, namun simpangan baku yang cukup besar pada 4.994 yang artinya data rata-rata memiliki rentang nilai 24.465 - 34.453 atau sekitar 35% dari keseluruhan rentang data. hal ini masih cukup tinggi mengingat rentang normal _BMI_ ini adalah 18.5-25. untuk kemiringannya sendiri jika dilihat pada nilai kemiringan yang hampir normal yaitu pada 0.081, yang artinya kemiringan sangat condong ke kanan namun sangat kecil, dengan keruncingan yang cenderung rata pada -0.425. semua hal ini mengindikasikan fitur _BMI_ berdistribusi normal.
+  Berdasarkan gambar 11 dengan nilai detail pada tabel 11, data pasien yang di observasi memiliki rentang _BMI_ 19-47.75, dengan rata-rata 29.459 dan nilai tengah 30, jika dibandingkan dengan rentang datanya yaitu 28.75, jarak rata-rata dan nilai tengah dikatakan tidak terlalu jauh, namun simpangan baku yang cukup besar pada 4.994 yang artinya data rata-rata memiliki rentang nilai 24.465 - 34.453 atau sekitar 35% dari keseluruhan rentang data. hal ini masih cukup tinggi mengingat rentang normal _BMI_ ini adalah 18.5-25. untuk kemiringannya sendiri jika dilihat pada nilai kemiringan yang hampir normal yaitu pada 0.081, yang artinya kemiringan sangat condong ke kanan namun sangat kecil, dengan keruncingan yang cenderung rata pada -0.425. semua hal ini mengindikasikan fitur _BMI_ berdistribusi normal.
 
 #### Correlation (Multivariate Analysis)
 
@@ -604,7 +608,27 @@ Tabel 15. Perbandingan skor evaluasi setelah diurutkan
 
 Berdasarkan data pada tabel 15, dikatakan terdapat 2 model terbaik yaitu `SMOTE - Decision Tree` dan `SMOTE - Random Forest` namun, terdapat anomali dimana angka skor 1 pada semua metrik evaluasi, hal ini diasumsikan teknik _oversampling_ dari _SMOTE_ membuat data sintesis mungkin sama persis dengan data yang ada pada data uji, hal ini mungkin terjadi karena sangat sedikitnya data atau informasi yang tersedia, sehingga kedua model tersebut dianggap kurang _valid_.
 
-Maka dari itu diputuskan untuk memilih model `Original - Random Forest` sebagai model yang dianggap terbaik disini. model ini mendapatkan skor akurasi sebesar 0.987952, artinya hanya ada 1.2148% data yang gagal di identifikasi pada pasien diabetes maupun non-diabetes. skor presisi mempunyai skor sebesar 0.986577 artinya hanya ada 1.3423% model kemungkinan akan gagal mengidentifikasi pasien penderita diabetes. skor _recall_ sebesar 1 artinya model berhasil sepenuhnya mengidentifikasi pasien penderita diabetes tanpa kegagalan. _F1 Score_ sebesar 0.993243, artinya model tersebut mampu mengidentifikasi sebagian besar kasus diabetes dengan benar (_recall_ tinggi) sambil meminimalkan jumlah prediksi penderita diabetes yang salah (presisi tinggi).
+Maka dari itu diputuskan untuk memilih model `Original - Random Forest` sebagai model yang dianggap terbaik disini. model ini mendapatkan skor akurasi sebesar 0.987952, artinya hanya ada 1.2048% data yang gagal di identifikasi pada pasien diabetes maupun non-diabetes. skor presisi mempunyai skor sebesar 0.986577 artinya dari seluruh pasien yang diprediksi diabetes, hanya 1.3423% yang sebenarnya tidak menderita diabetes (salah alarm). skor _recall_ sebesar 1 artinya model berhasil sepenuhnya mengidentifikasi pasien penderita diabetes tanpa kegagalan. _F1 Score_ sebesar 0.993243, artinya model tersebut mampu mengidentifikasi sebagian besar kasus diabetes dengan benar (_recall_ tinggi) sambil meminimalkan jumlah prediksi penderita diabetes yang salah (presisi tinggi).
+
+Untuk melihat performa model terpilih secara lebih lengkap, berikut hasil evaluasi `Original - Random Forest` untuk masing-masing kelas pada data uji (166 pasien):
+
+Tabel 16. Confusion matrix model `Original - Random Forest`
+
+|                          | Prediksi Non-Diabetes | Prediksi Diabetes |
+| ------------------------ | --------------------- | ----------------- |
+| **Aktual Non-Diabetes**  | 17                    | 2                 |
+| **Aktual Diabetes**      | 0                     | 147               |
+
+Tabel 17. Skor evaluasi per kelas model `Original - Random Forest`
+
+| Kelas                | Precision | Recall   | F1 Score | Jumlah Data |
+| -------------------- | --------- | -------- | -------- | ----------- |
+| 0 (Non-Diabetes)     | 1.000000  | 0.894737 | 0.944444 | 19          |
+| 1 (Diabetes)         | 0.986577  | 1.000000 | 0.993243 | 147         |
+| Macro Average        | 0.993289  | 0.947368 | 0.968844 | 166         |
+| Weighted Average     | 0.988114  | 0.987952 | 0.987658 | 166         |
+
+Berdasarkan tabel 16 dan 17, seluruh pasien diabetes (147 dari 147) berhasil teridentifikasi, sedangkan dari 19 pasien non-diabetes terdapat 2 pasien yang salah diprediksi sebagai diabetes (_recall_ non-diabetes 0.894737). Hal ini menunjukkan model cenderung lebih "berhati-hati" dengan memprediksi diabetes, yang dipengaruhi oleh jumlah data non-diabetes yang jauh lebih sedikit dibanding data diabetes.
 
 ### Kesimpulan
 
